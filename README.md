@@ -110,15 +110,15 @@ worksheet_write_formula(worksheet, rowA, 8, [sumStr cStringUsingEncoding:NSUTF8S
 `format_set_border` | 设置边框        | [文档](http://libxlsxwriter.github.io/format_8h.html#a9cf7a28a6e8014cb98dff27415e2b1ca)
 `format_set_num_format` | 设置数字格式  | [文档](http://libxlsxwriter.github.io/format_8h.html#af77bbd0003344cb16d455c7fb709e16c)
 `worksheet_write_formula` | 数学公式   | [文档](http://libxlsxwriter.github.io/worksheet_8h.html#ae57117f04c82bef29805ec3eabc219bb)
-`worksheet_freeze_panes` | 标题栏固定    | [文档]() 
-`worksheet_write_string` | 写入文本     | [文档]() 
-`worksheet_write_number` | 写入数字     | [文档]() 
-`worksheet_merge_range`  | 合并行、列   | [文档]() 
+`worksheet_freeze_panes` | 标题栏固定    | --
+`worksheet_write_string` | 写入文本     | -- 
+`worksheet_write_number` | 写入数字     | --
+`worksheet_merge_range`  | 合并行、列   | --
 
 ### 四、备注
 
 - 1. 在使用 `worksheet_write_formula` 时，首先要保证写入时使用 `worksheet_write_number` ，并且在预览时此值会为默认的 `0`，不过在实际打开此excel时会直接计算此公式得值，因为已经将公式在excel文件中写好了。
-- 2. 在使用 `"=SUM(A1:A2)"`时，要将 `1，2`等行数 用 在excel打开时的行数或列数。
+- 2. 在使用 `"=SUM(A1:A2)"`时，要将 `1，2`等行数 替换成 在excel打开时的行数或列数。
 
 --
 
